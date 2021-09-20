@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Mutli Tabs Page</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/uploadFileButton.css" rel="stylesheet">
+    <link href="css/downloadReport.css" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <link href="Modules/magnific-popup/dist/magnific-popup.css" rel="stylesheet" type="text/css">
+    <!--    <link rel="stylesheet" href="css/popUp.css">-->
+    <link href="css/popUp.css" rel="stylesheet">
+
+    <script src="Modules/magnific-popup/dist/jquery.magnific-popup.min.js" type="text/javascript"></script>
+
+    <script src="JS/uploadFileButton.js"></script>
+    <script src="JS/downloadReport.js"></script>
+    <script src="JS/popUp.js"></script>
+</head>
+
+
+<body>
+<div class="navbar">
+    <div class="container">
+        <a class="logo" href="#">Palestine <span>Red</span> Crescent Society</a>
+
+        <img alt="Open navigation" class="mobile-menu" id="mobile-cta" src="images/menu.svg">
+        <nav>
+            <img alt="Open navigation" class="mobile-menu-exit" id="mobile-exit" src="images/exit.svg">
+
+            <ul class="primary-nav">
+                <li class="current"><a href="#">Home</a></li>
+                <li><a href="#">Upload Files</a></li>
+                <li><a href="#">Statistics</a></li>
+            </ul>
+
+            <ul class="secondary-nav">
+                <li class="contact-cta"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<section class="hero">
+    <div class="container">
+        <div class="left-col">
+            <p class="subhead">It's Nitty &amp; Gritty</p>
+            <h1>A Task That Doesn't Stink</h1>
+            <div class="file-choose">
+                <input class="file-upload__input" id="myFile" multiple name="myFile[]" type="file">
+                <button class="file-upload__button" type="button">Choose File(s)</button>
+                <span class="file-upload__label"></span>
+            </div>
+
+            <div class="file-upload">
+
+                <input class="file-upload__input" id="myFile2" multiple name="myFile[]" type="file">
+                <button class="file-upload__button2" type="button">Upload File(s)</button>
+                <span class="file-upload__label"></span>
+
+            </div>
+
+            <div class="file-download-report" id="inline-popups">
+
+                <!--                <button class="file-download-report__button">Download Report</button>-->
+
+                <a class="file-download-report__button" data-effect="mfp-zoom-in" href="#form-popup">Download Report</a>
+                <span class="file-download-report__label" id="myPopup"></span>
+
+            </div>
+
+
+            <!---->
+            <!---->
+            <!--                        POP-UP date picker-->
+            <!--                        <div class="form-popup" id="myForm">-->
+            <div class="white-popup mfp-with-anim mfp-hide" class="form-popup" id="form-popup">
+                <form action="/action_page.php" class="form-container">
+                    <h2>Filter Date</h2>
+
+                    <label for="dateFrom">From :</label>
+                    <input id="dateFrom" name="dateFrom" type="date">
+
+                    <label for="dateTo">To :</label>
+                    <input id="dateTo" name="dateTo" type="date">
+                </form>
+            </div>
+
+
+            <div class="hero-cta">
+                <!--                <a href="#" class="primary-cta">Upload Files</a>-->
+                <a class="watch-video-cta" href="#">
+                    <img alt="Watch a video" src="images/watch.svg">watch a video
+                </a>
+
+            </div>
+        </div>
+
+        <img alt="Illustration" class="hero-img" src="images/illustration.svg">
+    </div>
+
+    <!---->
+    <!---->
+    <!--    Contact Section-->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-left">
+                <h2>Contact</h2>
+                <form action="">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text">
+
+                    <label for="email">E-mail</label>
+                    <input id="email" name="name" type="email">
+
+                    <label for="message">Message</label>
+                    <textarea cols="30" id="message" name="message" rows="10"></textarea>
+
+                    <input class="send-message-cta" type="submit" value="Send message">
+
+                </form>
+            </div>
+
+            <div class="contact-right">
+                <iframe allowfullscreen=""
+                        height="450" loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.0152256181486!2d35.21030171511542!3d31.906183681243743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d2aa7cfe171ad%3A0x3b87d87e4644eb05!2sPalestine%20Red%20Crescent%20Society%20al-%20Bireh%20Branch!5e0!3m2!1sen!2sil!4v1628928770521!5m2!1sen!2sil"
+                        style="border:0;" width="600"></iframe>
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+
+<script>
+
+    const mobileBtn = document.getElementById("mobile-cta")
+    nav = document.querySelector("nav");
+    mobileBtnExit = document.getElementById("mobile-exit");
+    uploadFileBtn = document.getElementsByClassName("primary-cta");
+
+    mobileBtn.addEventListener('click', () => {
+
+            nav.classList.add('menu-btn');
+        }
+    )
+
+    mobileBtnExit.addEventListener("click", () => {
+        nav.classList.remove('menu-btn')
+    })
+
+
+</script>
+</body>
+</html>

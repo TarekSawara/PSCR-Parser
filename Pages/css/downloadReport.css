@@ -1,0 +1,71 @@
+:root {
+    --primary-report-color: #8b0000;
+}
+
+.file-download-report {
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    margin: 0.5em 0;
+}
+
+.file-download-report__button {
+    background: var(--primary-report-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.6em 1.3em;
+    font-size: 1.4em;
+    border-radius: 5em;
+    font-weight: bold;
+    display: inline-block;
+    -webkit-appearance: none;
+    border: 2px solid var(--primary-report-color);
+    outline: none;
+    margin-right: 15px;
+    font-family: "Quicksand", sans-serif;
+    cursor: pointer;
+}
+
+.file-download-report__button:hover {
+    /* Darken on click by 15% (down to 85%) */
+    filter: brightness(1.15);
+}
+
+.file-download-report__button:active {
+    background: var(--primary-report-color);
+}
+
+.file-download-report__label {
+    max-width: 250px;
+    font-size: 0.95em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Quicksand", sans-serif;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+/*# sourceMappingURL=downloadReport.css.map */
