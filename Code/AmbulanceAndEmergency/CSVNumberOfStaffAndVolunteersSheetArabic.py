@@ -256,15 +256,6 @@ class CSVNumberOfStaffAndVolunteersSheetArabic:
                     print(position, program, desired_columns)
                     position, desired_columns = [], []
                     program = None
-        #
-        # print("=1", combined_df.loc[((combined_df['Position'] == 'عدد العاملين')
-        #                              & (combined_df['file'] == 'الاسعاف والطوارئ'))])
-        #
-        # print("=2", combined_df.loc[((combined_df['Position'] == 'عدد العاملين')
-        #                              & (combined_df['file'] == 'الاسعاف والطوارئ'))]['الاناث'])
-        #
-        # print("=3", combined_df.loc[((combined_df['Position'] == 'عدد العاملين')
-        #                              & (combined_df['file'] == 'الاسعاف والطوارئ'), 'الاناث')])
 
         # cell_obj = sh.cell(row=i, column=j)
         # print(cell_obj.value, end=" ")
